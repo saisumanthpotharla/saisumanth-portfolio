@@ -7,107 +7,132 @@
     <meta name="keywords" content="Data Analytics, Power BI, Azure, Freelance Consultant, Business Intelligence">
     <meta name="author" content="Saisumanth Potharla">
     <title>Saisumanth Potharla - Data Analytics Consultant</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #f9f9f9, #eaeaea);
             color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
         .container {
             width: 90%;
             max-width: 1200px;
             margin: auto;
-            overflow: hidden;
+            padding: 40px 0;
         }
         header {
-            background: #222;
+            background: linear-gradient(120deg, #3f51b5, #5a55ae);
             color: #fff;
-            padding: 40px 0;
             text-align: center;
+            padding: 60px 20px;
+            transition: background 0.3s ease;
         }
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
         }
         header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        section {
-            padding: 40px 0;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 10px auto;
         }
         h2 {
+            font-size: 2.2rem;
             text-align: center;
-            font-size: 2em;
             margin-bottom: 30px;
+            color: #222;
         }
         .flex-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
             gap: 20px;
+            justify-content: center;
+            animation: fadeIn 1s ease-in;
         }
         .card {
-            flex: 1 1 calc(33% - 40px);
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            flex: 1 1 280px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .card h3 {
-            font-size: 1.5em;
+            color: #3f51b5;
             margin-bottom: 10px;
+            font-size: 1.4rem;
         }
         .cta {
-            text-align: center;
-            background: #333;
+            background: #3f51b5;
             color: white;
-            padding: 30px;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 0 0 12px 12px;
         }
         .cta a {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 20px;
             text-decoration: none;
-            color: #fff;
-            font-size: 1.2em;
-            background: #555;
-            padding: 10px 20px;
-            border-radius: 5px;
+            color: white;
+            font-weight: 600;
+            background: #ff6f61;
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: background 0.3s ease;
         }
-        .contact-form input, .contact-form textarea {
+        .cta a:hover {
+            background: #ff3d2e;
+        }
+        .contact-form input,
+        .contact-form textarea {
             width: 100%;
             padding: 12px;
-            margin: 10px 0;
+            margin-top: 10px;
+            border-radius: 8px;
             border: 1px solid #ccc;
-            border-radius: 6px;
         }
         .contact-form button {
-            background-color: #222;
+            background: #3f51b5;
             color: white;
-            padding: 15px 30px;
+            padding: 14px 28px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
+            margin-top: 20px;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
         .contact-form button:hover {
-            background-color: #555;
+            background: #303f9f;
         }
         footer {
             text-align: center;
-            font-size: 0.9em;
-            color: #999;
-            padding: 20px;
+            font-size: 0.85rem;
+            color: #777;
+            padding: 30px 0;
         }
         @media (max-width: 768px) {
             .card {
                 flex: 1 1 100%;
             }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -121,94 +146,72 @@
     </div>
 </header>
 
-<section class="services">
-    <div class="container">
-        <h2>What I Offer</h2>
-        <div class="flex-grid">
-            <div class="card">
-                <h3>Consulting</h3>
-                <p>Data strategy, governance, cloud integration, and process optimization customized for your business.</p>
-            </div>
-            <div class="card">
-                <h3>Freelancing Projects</h3>
-                <p>BI dashboards, predictive analytics, data warehousing, and cloud-based data pipelines.</p>
-            </div>
-            <div class="card">
-                <h3>Community Engagement</h3>
-                <p>Workshops, mentoring sessions, and active contribution to the data community.</p>
-            </div>
+<section class="services container">
+    <h2>What I Offer</h2>
+    <div class="flex-grid">
+        <div class="card">
+            <h3>Consulting</h3>
+            <p>Data strategy, governance, cloud integration, and process optimization customized for your business.</p>
+        </div>
+        <div class="card">
+            <h3>Freelancing Projects</h3>
+            <p>BI dashboards, predictive analytics, data warehousing, and cloud-based data pipelines.</p>
+        </div>
+        <div class="card">
+            <h3>Community Engagement</h3>
+            <p>Workshops, mentoring sessions, and active contribution to the data community.</p>
         </div>
     </div>
 </section>
 
-<section class="case-studies">
-    <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="flex-grid">
-            <div class="card">
-                <h3>Diesel Consumption Fraud Detection</h3>
-                <p><strong>Company:</strong> L&T IoT Installation</p>
-                <p><strong>Challenge:</strong> Inefficient diesel tracking causing fraud.</p>
-                <p><strong>Solution:</strong> IoT with cloud analytics to track fuel usage.</p>
-                <p><strong>Impact:</strong> Reduced fraud by 30%, improved operations.</p>
-            </div>
-            <div class="card">
-                <h3>Credit Risk Modelling</h3>
-                <p><strong>Company:</strong> Epic Cloud</p>
-                <p><strong>Challenge:</strong> Banking firms required accurate customer risk scoring.</p>
-                <p><strong>Solution:</strong> Developed ML-based credit risk models using Azure Synapse.</p>
-                <p><strong>Impact:</strong> Improved risk categorization, reducing defaults by 20%.</p>
-            </div>
+<section class="case-studies container">
+    <h2>Featured Projects</h2>
+    <div class="flex-grid">
+        <div class="card">
+            <h3>Diesel Consumption Fraud Detection</h3>
+            <p><strong>Company:</strong> L&T IoT Installation</p>
+            <p><strong>Challenge:</strong> Inefficient diesel tracking causing fraud.</p>
+            <p><strong>Solution:</strong> IoT with cloud analytics to track fuel usage.</p>
+            <p><strong>Impact:</strong> Reduced fraud by 30%, improved operations.</p>
+        </div>
+        <div class="card">
+            <h3>Credit Risk Modelling</h3>
+            <p><strong>Company:</strong> Epic Cloud</p>
+            <p><strong>Challenge:</strong> Banking firms required accurate customer risk scoring.</p>
+            <p><strong>Solution:</strong> Developed ML-based credit risk models using Azure Synapse.</p>
+            <p><strong>Impact:</strong> Improved risk categorization, reducing defaults by 20%.</p>
         </div>
     </div>
 </section>
 
-<section class="skills">
-    <div class="container">
-        <h2>Core Competencies</h2>
-        <div class="flex-grid">
-            <div class="card">
-                <h3>Data Analytics</h3>
-                <p>Python, SQL, DAX, Predictive Modeling</p>
-            </div>
-            <div class="card">
-                <h3>Cloud Technologies</h3>
-                <p>Azure, AWS, Synapse, Data Lake</p>
-            </div>
-            <div class="card">
-                <h3>BI Tools</h3>
-                <p>Power BI, Tableau, Cognos</p>
-            </div>
-            <div class="card">
-                <h3>Project Management</h3>
-                <p>Agile, JIRA, Confluence, MS Project</p>
-            </div>
+<section class="skills container">
+    <h2>Core Competencies</h2>
+    <div class="flex-grid">
+        <div class="card">
+            <h3>Data Analytics</h3>
+            <p>Advanced SQL, Python, PySpark, DAX, Power BI, Tableau for data modeling, insights, and forecasting.</p>
+        </div>
+        <div class="card">
+            <h3>Cloud & Engineering</h3>
+            <p>Azure Synapse, Data Lake, ADF, Databricks, Redshift, Glue – for scalable data infrastructure.</p>
+        </div>
+        <div class="card">
+            <h3>Project & Business Analysis</h3>
+            <p>Cross-functional collaboration, Agile delivery, JIRA/Confluence, stakeholder engagement, and business strategy.</p>
         </div>
     </div>
 </section>
 
 <section class="cta">
     <div class="container">
-        <h2>Let’s Build Something Great Together</h2>
-        <p>Whether you need a freelance analyst or a consultant for a data strategy – I’m here to help.</p>
-        <a href="#contact">Contact Me</a>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Get in Touch</h2>
-        <form class="contact-form" action="mailto:saisumanth.potharla@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <h2>Need Help With Data Strategy or Insights?</h2>
+        <p>Let’s collaborate to build scalable data solutions for your business success.</p>
+        <a href="mailto:saisumanth.potharla@gmail.com">Get in Touch</a>
     </div>
 </section>
 
 <footer>
-    <p>© 2025 Saisumanth Potharla • <a href="https://www.linkedin.com/in/saisumanthpotharla" target="_blank">LinkedIn</a> • <a href="mailto:saisumanth.potharla@gmail.com">Email</a></p>
+    <p>&copy; 2025 Saisumanth Potharla. All rights reserved.</p>
 </footer>
 
 </body>
